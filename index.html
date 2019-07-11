@@ -300,6 +300,20 @@
       onClick('tour', tour);
     </script>
   </body>
+  <body>
+	<!-- Step 1: Create a button
+		Explain: Let's create a button that always moves the map
+		back to our location when you click the button.
+	 -->
+	<p> <!-- paragraph marker added here for spacing -->
+		<button onclick="panHome()">Pan back to Home</button>
+	</p>
+	<div id="map" class="map"></div>
+	<footer>
+		<p>This tutorial is based on code from: <a href="http://openlayers.org/en/latest/examples/animation.html">Open Layers View Animation</a></p>
+		<p>This map uses the <a href="http://openlayers.org/en/latest/apidoc/">Open Layers API</a></p>
+	</footer>
+</body>
     <style>
       body {
         background-color:#FCFAF8;
