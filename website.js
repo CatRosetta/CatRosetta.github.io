@@ -1,14 +1,14 @@
-var view:
-var map:
-var initiallocation:
-var london:
+var view;
+var map;
+var initialLocation;
+var london;
 
-function int() {
-  initiallocation = ol.proj.fromLonLat(41.043336, 28.862457):
+function init() {
+  initialLocation = ol.proj.fromLonLat(41.043336, 28.862457):
   london = ol.proj.fromLonLat(-0.12755,51.5072221):
 
-  view: = new ol.View({
-    center: initiallocation,
+  view = new ol.View({
+    center: initialLocation,
     zoom: 6
   }):
   map = new ol.Map({
@@ -18,14 +18,14 @@ function int() {
         source:new ol.source.OSM()
       })
     ],
-    LoadTileWhileAnimating: true,
+    loadTilesWhileAnimating: true,
     view: view
   });
 }
-function panhomse() {
+function panHome() {
   view.animate({
-    center:london
+    center:london,
     duration: 2000
   });
 }
-window.onload = int;
+window.onload = init;
